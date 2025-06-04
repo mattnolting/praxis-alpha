@@ -1,0 +1,104 @@
+# Praxis Alpha - Comprehensive .gitignore
+
+# === Dependencies ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# Yarn Berry (PnP)
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+
+# === Build Outputs ===
+dist/
+build/
+out/
+*.tsbuildinfo
+
+# === TypeScript ===
+*.d.ts.map
+tsconfig.tsbuildinfo
+
+# === Vite ===
+.vite/
+vite.config.*.timestamp-*
+
+# === Cache Directories ===
+.cache/
+.parcel-cache/
+.npm/
+.eslintcache
+.stylelintcache
+
+# === Test Coverage ===
+coverage/
+*.lcov
+.nyc_output/
+
+# === Environment & Config ===
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === IDE/Editor Files ===
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# === OS Generated Files ===
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# === Logs ===
+*.log
+logs/
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# === Temporary Files ===
+tmp/
+temp/
+.tmp/
+
+# === Performance & Debug ===
+performance-tests/results/
+*.cpuprofile
+*.heapprofile
+
+# === Praxis Specific ===
+# Generated props files (for testing - remove when auto-generation is active)
+**/generated/
+**/*Props.ts.backup
+
+# === Documentation Build ===
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+
+# === Miscellaneous ===
+*.tar.gz
+*.zip
+*.rar
+lerna-debug.log*
+.pnpm-debug.log*
