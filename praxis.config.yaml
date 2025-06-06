@@ -1,1 +1,15 @@
-# Praxis Configuration - Root Level\n# Clean, readable YAML for project-wide settings\n\ntheme: dark\nversion: '1.0.0'\ngeneration:\n  outputDirectory: './generated'\n  filePattern: '{name}Props.ts'\n  typePrefix: 'Praxis'\n\n# Global prop defaults\ndefaults:\n  variant: 'primary'\n  size: 'default'\n  disabled: false\n\n# Development settings\ndevelopment:\n  watch: true\n  hotReload: true\n  verbose: false\n
+# Praxis Configuration - Root Level
+# Clean, readable YAML for project-wide settings
+
+theme: dark
+version: '1.0.0'
+generation:
+  outputDirectory: './generated'
+  filePattern: '{name}Props.ts'
+  typePrefix: 'Praxis'
+
+# Global prop defaults
+defaults:
+  variant: 'primary'
+  size: 'default'
+  disabled: false

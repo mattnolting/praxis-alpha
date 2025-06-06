@@ -1,61 +1,88 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "module": "ESNext",
+    "target": "ES2022",
+    "module": "ESNext", 
     "moduleResolution": "bundler",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    
     "allowImportingTsExtensions": true,
+    "moduleDetection": "force",
+    "verbatimModuleSyntax": false,
+    "allowArbitraryExtensions": true,
+    
     "strict": true,
+    "exactOptionalPropertyTypes": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./dist/.tsbuildinfo",
+    
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    
-    // Declaration settings for library build
-    "declaration": true,
-    "declarationMap": true,
-    "emitDeclarationOnly": false,
-    
-    // Source maps
-    "sourceMap": true,
-    "inlineSources": false,
-    
-    // Output configuration
-    "outDir": "dist",
-    "rootDir": ".",
-    
-    // Modern features
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    
-    // Path mapping
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./core/*"]
-    },
-    
-    // JSON imports
+    "isolatedModules": true,
     "resolveJsonModule": true,
     
-    // Interop settings
-    "isolatedModules": true,
-    "verbatimModuleSyntax": false
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": false,
+    "removeComments": false,
+    "emitDeclarationOnly": false,
+    
+    "baseUrl": ".",
+    "rootDir": ".",
+    "outDir": "./dist",
+    "paths": {
+      "@/*": ["./packages/*"],
+      "@praxis/generate": ["./packages/generate/index.ts"],
+      "@praxis/hmr": ["./packages/hmr/index.ts"],
+      "@praxis/core": ["./packages/generate/core/index.ts"]
+    },
+    
+    "useDefineForClassFields": true,
+    "experimentalDecorators": false,
+    "emitDecoratorMetadata": false,
+    
+    "preserveValueImports": false,
+    "importsNotUsedAsValues": "remove"
   },
+  
   "include": [
-    "core/index.ts",
-    "core/plugin.ts",
-    "core/engine/*.ts",
-    "core/scanner/*.ts",
-    "utils/*.ts",
-    "schemas/*.ts",
-    "vite.config.ts"
+    "packages/generate/index.ts",
+    "packages/generate/config-parser.ts", 
+    "packages/generate/quick-native-watcher.ts",
+    "packages/generate/core/*.ts",
+    "packages/hmr/index.ts",
+    "performance-comparison/**/*.ts",
+    "test-poc/**/*.ts"
   ],
+  
   "exclude": [
     "node_modules",
     "dist",
     "**/*.test.ts",
-    "**/*.spec.ts",
+    "**/*.spec.ts", 
     "**/test-*.ts",
-    "examples/**/*",
-    "performance-tests/**/*"
-  ]
+    "**/*Props.ts",
+    "**/*Schema.json",
+    "core-removed/**/*",
+    "dist-removed/**/*",
+    "*.removed",
+    ".git",
+    "coverage",
+    "*.log"
+  ],
+  
+  "watchOptions": {
+    "watchFile": "useFsEvents",
+    "watchDirectory": "useFsEvents",
+    "fallbackPolling": "dynamicPriority",
+    "synchronousWatchDirectory": true,
+    "excludeDirectories": ["**/node_modules", "**/dist", "**/*-removed"]
+  }
 }
