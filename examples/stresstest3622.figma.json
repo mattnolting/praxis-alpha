@@ -1,0 +1,22 @@
+{
+  "componentName": "StressTest3622",
+  "variants": [
+    "small",
+    "medium",
+    "large",
+    "xlarge"
+  ],
+  "sizes": [
+    "12",
+    "16",
+    "20",
+    "24",
+    "32"
+  ],
+  "states": [
+    "isVisible",
+    "isHidden",
+    "isAnimating"
+  ],
+  "category": "general"
+}

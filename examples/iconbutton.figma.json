@@ -1,0 +1,19 @@
+{
+  "componentName": "IconButton",
+  "variants": [
+    "solid",
+    "outline",
+    "ghost"
+  ],
+  "sizes": [
+    "xs",
+    "sm",
+    "md",
+    "lg",
+    "xl"
+  ],
+  "states": [
+    "disabled"
+  ],
+  "category": "general"
+}

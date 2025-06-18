@@ -1,0 +1,24 @@
+{
+  "componentName": "Card",
+  "variants": [
+    "outline",
+    "filled",
+    "elevated",
+    "ghost",
+    "none",
+    "sm",
+    "md",
+    "lg"
+  ],
+  "sizes": [
+    "sm",
+    "md",
+    "lg"
+  ],
+  "states": [
+    "hoverable",
+    "clickable",
+    "disabled"
+  ],
+  "category": "general"
+}

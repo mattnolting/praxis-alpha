@@ -1,169 +1,18 @@
 {
-  "name": "praxis-alpha",
-  "version": "0.3.0",
-  "description": "Universal data sharing protocol - 100% Bun-native edition",
+  "name": "praxis",
   "type": "module",
-  "main": "packages/generate/index-phase3b.ts",
-  "exports": {
-    ".": {
-      "types": "./packages/generate/index-phase3b.ts",
-      "import": "./packages/generate/index-phase3b.ts",
-      "bun": "./packages/generate/index-phase3b.ts"
-    },
-    "./generate": {
-      "types": "./packages/generate/index-phase3b.ts",
-      "import": "./packages/generate/index-phase3b.ts",
-      "bun": "./packages/generate/index-phase3b.ts"
-    },
-    "./hmr": {
-      "types": "./packages/hmr/index.ts",
-      "import": "./packages/hmr/index.ts",
-      "bun": "./packages/hmr/index.ts"
-    }
-  },
   "scripts": {
-    "dev": "bun packages/generate/index-phase3b.ts watch",
-    "dev:hmr": "bun packages/hmr/index.ts",
-    "generate": "bun packages/generate/index-phase3b.ts generate",
-    "watch": "bun packages/generate/index-phase3b.ts watch",
-    
-    "test": "bun test",
-    "test:abstraction": "cd performance-comparison && bun test-abstraction.ts",
-    "test:bun-native": "cd performance-comparison && bun test-bun-native.ts",
-    "test:poc": "cd test-poc && bun run-test.ts",
-    "test:organization": "bun test-organization.ts",
-    "test:cleanup": "bun validate-cleanup.ts",
-    
-    "build": "bun build packages/generate/index.ts --target=bun --outfile=dist/praxis-core.js",
-    "build:hmr": "bun build packages/hmr/index.ts --target=bun --outfile=dist/praxis-hmr.js",
-    
-    "benchmark": "bun tests/benchmark-bun-native.ts",
-    "benchmark:abstraction": "cd performance-comparison && bun test-abstraction.ts",
-    "benchmark:enhanced": "bun tests/benchmark-enhanced.ts",
-    "benchmark:yaml": "bun tests/benchmark-yaml.ts",
-    
-    "dev:parallel": "bun packages/generate/index-parallel.ts watch",
-    "dev:enhanced": "bun packages/generate/index-enhanced.ts watch",
-    "generate:parallel": "bun packages/generate/index-parallel.ts generate",
-    "dev:organized": "bun packages/generate/index-organized.ts watch",
-    "dev:phase3b": "bun packages/generate/index-phase3b.ts watch",
-    "generate:organized": "bun packages/generate/index-organized.ts generate",
-    "generate:enhanced": "bun packages/generate/index-enhanced.ts generate",
-    "generate:phase3b": "bun packages/generate/index-phase3b.ts generate",
-    "batch:phase3b": "bun packages/generate/index-phase3b.ts batch",
-    
-    "bundle:analyze": "bun build packages/generate/index.ts --analyze --target=bun",
-    "bundle:check": "bun build packages/generate/index.ts --target=bun --minify && ls -lh dist/",
-    
-    "validate:config": "bun tests/validate-bun-config.ts",
-    "validate:phase2": "bun tests/validate-phase2.ts",
-    "validate:phase3a": "bun tests/validate-phase3a.ts",
-    "validate:phase3a-enhanced": "bun tests/validate-phase3a-enhanced.ts",
-    "validate:phase3b": "bun tests/validate-phase3b.ts",
-    "validate:phase3b-enhanced": "bun tests/validate-phase3b-enhanced.ts",
-    "validate:bun": "bun run validate:config && bun run benchmark",
-    "validate:performance": "bun run test:abstraction && bun run benchmark:abstraction",
-    "benchmark:phase3a": "bun tests/validate-phase3a.ts",
-    "benchmark:phase3a-enhanced": "bun tests/validate-phase3a-enhanced.ts",
-    "benchmark:phase3b": "bun tests/validate-phase3b.ts",
-    "benchmark:phase3b-enhanced": "bun tests/validate-phase3b-enhanced.ts",
-    "deploy:phase3a": "bun run validate:phase3a-enhanced && echo 'Phase 3A enhanced validated and ready'",
-    "deploy:phase3b": "bun run validate:phase3b && echo 'Phase 3B batch operations validated and ready'",
-    "deploy:phase3b-enhanced": "bun run validate:phase3b-enhanced && echo 'Phase 3B enhanced with ops/sec metrics validated and ready'",
-    
-    "type:check": "bun --bun tsc --noEmit",
-    "lint": "echo 'Using surgical linting approach - no external linters needed'",
-    "format": "echo 'Using Bun native formatting - no Prettier needed'",
-    
-    "clean": "rm -rf dist/ node_modules/ generated/ *Props.ts *Schema.json",
-    "clean:generated": "rm -rf generated/ *Props.ts *Schema.json",
-    "cleanup:root": "bun cleanup-root-now.ts",
-    "fix:clutter": "bun cleanup-root-now.ts && bun validate-cleanup.ts",
-    "organize:files": "bun organize-generated-files.ts",
-    "fresh": "bun run clean && bun install",
-    "deps:audit": "bun pm ls",
-    
-    "ready:deploy": "bun run clean && bun install && bun run validate:bun && bun run validate:performance"
+    "init": "bun praxis.ts init",
+    "analyze": "bun praxis.ts analyze",
+    "migrate": "bun praxis.ts migrate", 
+    "monitor": "bun praxis.ts monitor",
+    "measure": "bun praxis.ts measure",
+    "dev": "bun praxis.ts monitor",
+    "build": "bun praxis.ts migrate && bun praxis.ts measure",
+    "ci": "bun run analyze && bun run migrate && bun run measure"
   },
-  
-  "dependencies": {},
-  
   "devDependencies": {
-    "@types/node": "^22.0.0"
-  },
-  
-  "peerDependencies": {
-    "vite": ">=6.0.0",
-    "typescript": ">=5.0.0"
-  },
-  
-  "peerDependenciesMeta": {
-    "vite": { "optional": true },
-    "typescript": { "optional": true }
-  },
-  
-  "engines": {
-    "bun": ">=1.0.0",
-    "node": "not supported - use Bun instead"
-  },
-  
-  "packageManager": "bun@latest",
-  
-  "trustedDependencies": [],
-  
-  "keywords": [
-    "praxis",
-    "bun-native",
-    "typescript",
-    "universal-data-sharing",
-    "design-system",
-    "performance",
-    "zero-dependencies",
-    "surgical-development",
-    "platform-native",
-    "yaml-to-typescript",
-    "component-props",
-    "cross-platform"
-  ],
-  
-  "author": "Praxis System",
-  "license": "MIT",
-  
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/praxis-system/praxis-alpha"
-  },
-  
-  "bugs": {
-    "url": "https://github.com/praxis-system/praxis-alpha/issues"
-  },
-  
-  "homepage": "https://github.com/praxis-system/praxis-alpha#readme",
-  
-  "bun": {
-    "build": {
-      "target": "bun",
-      "format": "esm",
-      "minify": false,
-      "sourcemap": true,
-      "external": []
-    },
-    "dev": {
-      "watch": ["packages/**/*.ts", "tests/**/*.ts", "**/*.praxis.yaml"],
-      "ignore": ["node_modules", "dist", "*.test.*", "cleanup-backups"]
-    },
-    "test": {
-      "coverage": {
-        "enabled": true,
-        "reporter": ["text", "html"]
-      }
-    }
-  },
-  
-  "performance": {
-    "bundle-size": "< 2KB",
-    "ops-per-second": "> 6M",
-    "startup-time": "< 100ms",
-    "memory-usage": "< 0.5KB per config"
+    "@types/bun": "latest",
+    "typescript": "^5.0.0"
   }
 }

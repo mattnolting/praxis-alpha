@@ -1,0 +1,16 @@
+{
+  "componentName": "StressTest2470",
+  "variants": [
+    "small",
+    "medium",
+    "large"
+  ],
+  "sizes": [
+    "12",
+    "16",
+    "20",
+    "24"
+  ],
+  "states": [],
+  "category": "general"
+}

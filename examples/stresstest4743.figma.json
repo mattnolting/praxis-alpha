@@ -1,0 +1,19 @@
+{
+  "componentName": "StressTest4743",
+  "variants": [
+    "light",
+    "dark",
+    "auto"
+  ],
+  "sizes": [
+    "compact",
+    "comfortable",
+    "spacious"
+  ],
+  "states": [
+    "isPending",
+    "isComplete",
+    "isError"
+  ],
+  "category": "general"
+}

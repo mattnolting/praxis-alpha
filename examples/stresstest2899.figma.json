@@ -1,0 +1,15 @@
+{
+  "componentName": "StressTest2899",
+  "variants": [
+    "default",
+    "outlined",
+    "filled"
+  ],
+  "sizes": [
+    "compact",
+    "comfortable",
+    "spacious"
+  ],
+  "states": [],
+  "category": "general"
+}

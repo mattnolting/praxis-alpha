@@ -1,0 +1,16 @@
+{
+  "componentName": "StressTest1925",
+  "variants": [
+    "subtle",
+    "bold",
+    "minimal"
+  ],
+  "sizes": [
+    "tiny",
+    "small",
+    "medium",
+    "large"
+  ],
+  "states": [],
+  "category": "general"
+}

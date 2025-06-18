@@ -1,0 +1,16 @@
+{
+  "componentName": "StressTest2161",
+  "variants": [
+    "default",
+    "outlined",
+    "filled"
+  ],
+  "sizes": [
+    "tiny",
+    "small",
+    "medium",
+    "large"
+  ],
+  "states": [],
+  "category": "general"
+}

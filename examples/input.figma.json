@@ -1,0 +1,28 @@
+{
+  "componentName": "Input",
+  "variants": [
+    "text",
+    "email",
+    "password",
+    "number",
+    "tel",
+    "url",
+    "outline",
+    "filled",
+    "flushed",
+    "unstyled"
+  ],
+  "sizes": [
+    "xs",
+    "sm",
+    "md",
+    "lg"
+  ],
+  "states": [
+    "isDisabled",
+    "isInvalid",
+    "isRequired",
+    "isReadOnly"
+  ],
+  "category": "general"
+}

@@ -1,0 +1,20 @@
+{
+  "componentName": "Alert",
+  "variants": [
+    "info",
+    "success",
+    "warning",
+    "error"
+  ],
+  "sizes": [
+    "sm",
+    "md",
+    "lg"
+  ],
+  "states": [
+    "isVisible",
+    "isDismissible",
+    "isLoading"
+  ],
+  "category": "general"
+}

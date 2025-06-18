@@ -1,0 +1,21 @@
+{
+  "componentName": "StressTest4844",
+  "variants": [
+    "success",
+    "warning",
+    "danger",
+    "info"
+  ],
+  "sizes": [
+    "xs",
+    "sm",
+    "md",
+    "lg",
+    "xl"
+  ],
+  "states": [
+    "isExpanded",
+    "isCollapsed"
+  ],
+  "category": "general"
+}

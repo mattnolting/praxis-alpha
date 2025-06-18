@@ -1,0 +1,16 @@
+{
+  "componentName": "StressTest1990",
+  "variants": [
+    "small",
+    "medium",
+    "large"
+  ],
+  "sizes": [
+    "12",
+    "16",
+    "20",
+    "24"
+  ],
+  "states": [],
+  "category": "general"
+}

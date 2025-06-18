@@ -1,0 +1,24 @@
+/**
+ * StressTest0530 - Stress test component
+ * Complexity: Simple
+ */
+export default {
+  "component": {
+    "name": "StressTest0530",
+    "description": "Stress test component 530 with simple configuration",
+    "category": "feedback"
+  },
+  "uses": {
+    "variants": [
+      "success",
+      "warning"
+    ]
+  },
+  "output": {
+    "json": true,
+    "typescript": true,
+    "schema": true,
+    "figma": true,
+    "storybook": true
+  }
+} as const

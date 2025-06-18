@@ -1,0 +1,22 @@
+{
+  "componentName": "Modal",
+  "variants": [
+    "center",
+    "top",
+    "bottom"
+  ],
+  "sizes": [
+    "sm",
+    "md",
+    "lg",
+    "xl",
+    "full"
+  ],
+  "states": [
+    "isOpen",
+    "closeOnOverlay",
+    "closeOnEsc",
+    "showCloseButton"
+  ],
+  "category": "general"
+}

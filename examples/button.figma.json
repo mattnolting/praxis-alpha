@@ -1,0 +1,20 @@
+{
+  "componentName": "Button",
+  "variants": [
+    "primary",
+    "secondary",
+    "danger",
+    "ghost"
+  ],
+  "sizes": [
+    "sm",
+    "md",
+    "lg"
+  ],
+  "states": [
+    "disabled",
+    "loading",
+    "fullWidth"
+  ],
+  "category": "general"
+}

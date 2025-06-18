@@ -1,0 +1,8 @@
+{
+  "sourceDir": "src/components",
+  "outputDir": "praxis-generated",
+  "patterns": {
+    "components": ["**/*.tsx", "**/*.ts"],
+    "interfaces": ["**/*Props.ts", "**/*.types.ts"]
+  }
+}

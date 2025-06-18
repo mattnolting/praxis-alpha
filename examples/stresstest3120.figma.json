@@ -1,0 +1,16 @@
+{
+  "componentName": "StressTest3120",
+  "variants": [
+    "primary",
+    "secondary",
+    "tertiary"
+  ],
+  "sizes": [
+    "xs",
+    "sm",
+    "md",
+    "lg"
+  ],
+  "states": [],
+  "category": "general"
+}

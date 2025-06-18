@@ -1,0 +1,10 @@
+{
+  "componentName": "StressTest1009",
+  "variants": [
+    "default",
+    "outlined"
+  ],
+  "sizes": [],
+  "states": [],
+  "category": "general"
+}

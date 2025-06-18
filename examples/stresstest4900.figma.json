@@ -1,0 +1,22 @@
+{
+  "componentName": "StressTest4900",
+  "variants": [
+    "small",
+    "medium",
+    "large",
+    "xlarge"
+  ],
+  "sizes": [
+    "xs",
+    "sm",
+    "md",
+    "lg",
+    "xl"
+  ],
+  "states": [
+    "isVisible",
+    "isHidden",
+    "isAnimating"
+  ],
+  "category": "general"
+}
