@@ -1,4 +1,4 @@
-# Praxis: Revolutionary Design System Automation
+# Praxis: Intelligent Design System Automation
 
 **⚡ 85% faster component development • 🎯 Zero configuration • 📊 1,500+ component stress-tested**
 
